@@ -15,49 +15,43 @@ class Projects extends Component {
         <div className="projects-grid">
           {/* Project 1 */}
           <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
-            <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover'}} >React Project #1</CardTitle>
-            <CardText>
+            <CardTitle style={{color: 'white', fontWeight: 400,height: '176px', background: 'url(https://cdn2.scratch.mit.edu/get_image/project/420506313_282x210.png)'}} >Cat an Mouse</CardTitle>
+            <CardText style={{color: 'black'}}>
               Project 1
             </CardText>
             <CardActions border>
-              <Button colored>GitHub</Button>
-              <Button colored>CodePen</Button>
-              <Button colored>Live Demo</Button>
+              <Button colored><a href="https://scratch.mit.edu/users/King-coopa/" target="_blank">Scratch Profile</a></Button>
+              <Button colored><a href="https://scratch.mit.edu/projects/420506313/" target="_blank">Link</a></Button>
             </CardActions>
             <CardMenu style={{color: '#fff'}}>
-              <IconButton name="share" />
             </CardMenu>
           </Card>
 
           {/* Project 2 */}
           <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
-            <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover'}} >React Project #2</CardTitle>
-            <CardText>
+            <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://github.com/Kingcoopa/Ask-Tech-Quiz/blob/main/Assets/image/Quiz1.png?raw=true) center / cover'}} >Code Quiz</CardTitle>
+            <CardText style={{color: 'black'}}>
               Project 2
             </CardText>
             <CardActions border>
-              <Button colored>GitHub</Button>
-              <Button colored>CodePen</Button>
-              <Button colored>Live Demo</Button>
+              <Button colored><a href="https://github.com/Kingcoopa/Ask-Tech-Quiz">Github</a></Button>
+              <Button colored><a href="https://kingcoopa.github.io/Ask-Tech-Quiz/">Link</a></Button>
             </CardActions>
             <CardMenu style={{color: '#fff'}}>
-              <IconButton name="share" />
             </CardMenu>
           </Card>
 
           {/* Project 3 */}
           <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
-            <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover'}} >React Project #3</CardTitle>
-            <CardText>
+            <CardTitle style={{color: 'clack', height: '176px', background: 'url(https://github.com/Kingcoopa/Tripper/raw/main/public/assets/images/cover.png) center / cover'}} >Tripper App</CardTitle>
+            <CardText style={{color: 'black'}}>
               Project 3
             </CardText>
             <CardActions border>
-              <Button colored>GitHub</Button>
-              <Button colored>CodePen</Button>
-              <Button colored>Live Demo</Button>
+              <Button colored><a href="https://github.com/Kingcoopa/Tripper">Github</a></Button>
+              <Button colored><a href="https://tripper-db.herokuapp.com/">Link</a></Button>
             </CardActions>
             <CardMenu style={{color: '#fff'}}>
-              <IconButton name="share" />
             </CardMenu>
           </Card>
         </div>
@@ -66,17 +60,9 @@ class Projects extends Component {
       )
     } else if(this.state.activeTab === 1) {
       return (
-        <div><h1>This is Angular</h1></div>
+        <p>No additional Projects to ADD</p>
       )
-    } else if(this.state.activeTab === 2) {
-      return (
-        <div><h1>This is VueJS</h1></div>
-      )
-    } else if(this.state.activeTab === 3) {
-      return (
-        <div><h1>This is MongoDB</h1></div>
-      )
-    }
+   }
 
   }
 
@@ -86,13 +72,8 @@ class Projects extends Component {
     return(
       <div>
         <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId })} ripple>
-          <Tab>React</Tab>
-          <Tab>Angular</Tab>
-          <Tab>VueJS</Tab>
-          <Tab>MongoDB</Tab>
+          <Tab>My Projects</Tab>
         </Tabs>
-
-
           <Grid>
             <Cell col={12}>
               <div className="content">{this.toggleCategories()}</div>

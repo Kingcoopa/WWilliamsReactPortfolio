@@ -74,8 +74,13 @@ background: linear-gradient(to top, #4389A2, #5C258D); /* W3C, IE 10+/ Edge, Fir
 
 /* contact page css */
 
+.avatarp1-img {
+  width: 40px;
+  padding-top: 5em;
+}
+
 .avatar-img {
-  height: 250px;
+  width: 450px;
   padding-top: 5em;
 }
 
